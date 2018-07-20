@@ -51,7 +51,7 @@ WebDriver driver;
 	@Test
 	public void blankPassword() {
 		driver.findElement(By.id("email")).sendKeys("lesialysiak@gmail.com");
-		driver.findElement(By.id("passwd")).sendKeys("12345");
+		driver.findElement(By.id("passwd")).sendKeys("");
 		driver.findElement(By.id("SubmitLogin")).click();
 		Assert.assertEquals(driver.findElement(By.cssSelector("#center_column>div>ol>li")).getText(),
 				"Password is required.");
